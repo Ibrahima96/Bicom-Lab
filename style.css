@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+        url("/images/loisirs.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 6%;
+    position: relative;
+}
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Poetsen One", sans-serif;
+    text-decoration: none;
+}
+nav .span {
+    color: crimson;
+    font-size: 37px;
+    font-weight: 900;
+    font-family: "Poetsen One", sans-serif;
+}
+.navlink {
+    flex: 1;
+    text-align: right;
+}
+.navlink ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.navlink ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.navlink ul li::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: crimson;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navlink ul li:hover::after {
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    color: #fff;
+}
+.text-box h1 {
+    font-size: 42px;
+}
+
+.text-box p {
+    margin: 10px 0px 40px;
+    font-size: 20px;
+    color: #fff;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: "Poetsen One", sans-serif;
+}
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: crimson;
+}
+
+@media (max-width: 750px) {
+    .navlink {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background: crimson;
+        z-index: 2;
+        text-align: center;
+    }
+    .navlink ul li {
+        display: inline;
+        flex-direction: column;
+        line-height: 55px;
+    }
+    .logo,
+    nav .span {
+        font-size: 20px;
+    }
+    .text-box h1 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .text-box {
+        font-size: 15px;
+        top: 30%;
+        left: 30%;
+        transform: translate(-30%, 30%);
+    }
+    .centre-all {
+        flex-direction: column;
+        flex-basis: 50%;
+        margin: auto;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+    .row img {
+        object-fit: cover;
+        width: 100%;
+        object-fit: cover;
+    }
+    img {
+        object-fit: cover;
+    }
+    .row img:hover {
+        padding: 40px;
+        background: transparent;
+        z-index: 100;
+        object-fit: cover;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    }
+}
+.salon {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+p {
+    /* padding: 2% 12px; */
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    color: #777;
+}
+.centre {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 6%;
+}
+.centre-all {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    flex-basis: 34%;
+    border-radius: 15px;
+}
+.row img {
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+}
+.row img:hover {
+    box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: scale(1.2);
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.3);
+    z-index: 100;
+}
+
+.card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.card:hover svg {
+    scale: 0;
+    transform: rotate(-45deg);
+}
+
+.full {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmin;
+    box-sizing: border-box;
+}
+@media (max-width: 700px) {
+    .full {
+        flex-direction: column;
+    }
+    .card {
+        margin: 1%;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    div h1 {
+        font-size: 20px;
+    }
+    .ressource h1,
+    ul li a {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+.service {
+    text-align: center;
+    padding-top: 6%;
+}
+.service h1 {
+    font-size: 34px;
+    font-weight: 600;
+}
+.contact {
+    width: 80%;
+    padding-top: 100px;
+    margin: auto;
+    text-align: center;
+}
+.contact h1 {
+    font-style: 30px;
+    font-weight: 600;
+}
+.all-room {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.room h1 {
+    padding: 6%;
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+    align-items: center;
+    background: azure;
+    border: 1px solid gray;
+    text-align: center;
+    margin: 5%;
+    box-shadow:
+        rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+form input {
+    padding: 2% 35px;
+    margin: 3%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.bn {
+    margin: 2%;
+    border-radius: 5px;
+    padding: 1.2rem 4.2rem;
+    background: transparent;
+    transition: 0.5s ease;
+}
+input {
+    margin: auto;
+    padding: auto;
+}
+.bn:hover {
+    background: crimson;
+    color: white;
+}
+form input:hover {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.ressource h1 {
+    padding-top: 100px;
+    text-align: center;
+}
+.ressource ul li {
+    margin: 54px;
+
+    font-weight: 300;
+}
+.ressource ul li a {
+    font-size: 22px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+}
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+    width: 80%;
+    min-height: 10vh;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)),
+        url("/images/back.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+div h1,
+p {
+    text-align: center;
+    margin: 2% auto;
+}
+.pied{
+  padding:5% 0 ;
+  flex-basis: 100%;
+  background: transparent;
+  position: static;
+  bottom: 0;
+  right: 0;
+}
+h4{
+  text-align: center;
+}
+.icon{
+  text-align: center;
+  font-size: 30px;
+}
